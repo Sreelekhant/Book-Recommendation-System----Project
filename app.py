@@ -9,7 +9,7 @@ st.set_page_config(page_title="Book Recommendation System", layout="wide")
 @st.cache_data
 def load_data():
     books = pd.read_csv("Books.csv")
-    ratings = pd.read_csv("Ratings.csv")
+    ratings = pd.read_csv("Ratings.csv",encoding='latin-1')
     return books, ratings
 
 books, ratings = load_data()
